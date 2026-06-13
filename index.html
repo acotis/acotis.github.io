@@ -60,15 +60,11 @@ h1 {
 
 @media (prefers-color-scheme: dark) {
     a { color: deepskyblue; }
-    a:visited { color: plum; }
+    a:visited { color: #ff98ee; }
 }
 
 footer {
     text-align: right;
-}
-
-li {
-    margin-bottom: 0.6em;
 }
 
 #fire-background {
@@ -84,34 +80,67 @@ li {
     z-index: -100;
 }
 
+#outside-main {
+    padding: 1em;
+}
+
+h1 {
+    &::after {
+        content: "🔥";
+        float: right;
+    }
+}
+
+.spaced-list > * {
+    margin-bottom: 0.6em;
+}
+
 </style>
 
 <div id="fire-background"> </div> <!--Fire background-->
 
+<div id="outside-main">
 <main>
 
-<img src=a.png alt=a style=float:right>
 <h1>Fire's house</h1>
 <p>Hi! My name is Fire (he/they). My interests take the form of months-long single-minded obsessions which come and go at random. Right now, I'm intersted in Balatro and cryptic crosswords.
+
+<p>I'm currently <a href="todo">tracking</a> my win rates in Balatro on Gold stake for different decks. Aesthetically, I'd like to say that "True Balatro" is a game where you first select a deck uniformly at random and then play a run on that deck. Once I have more data, I will be able to report my win rate at True Balatro.
+
+<p>I have recently created some cryptic crosswords of my own! See below for the tool I used to do this. (Links coming soon.)
+<ul>
+    <li> Pip pip, cutie! <!--todo add links -- probably link to CWF instead of PNG-->
+    <li> Unfriend me back
+    <li> Initialization machinery (created with my friend Lynn)
+</ul>
 
 <p>I have good opinions about <a href="todo">equality</a>.
 
 <h2>Projects</h2>
 
-<ul>
+<ul class="spaced-list">
 <li><a href=https://acotis.itch.io/perplexions?>Perplexions</a> — a puzzle game I wrote by hand in pure Rust in just ten days. Probably my favorite single project I've completed.
+<li><a href="https://github.com/acotis/one-down">One Down</a>, a simple utility to convert a markdown-like format for describing crossword puzzles into a PNG.
 <li><a href=https://docs.rs/clubs-diamonds/latest/clubs_diamonds/>clubs-diamonds</a> — an expression brute-forcer for code golf. It's a Rust crate! I have saved many bytes in code golf using this, and a few other people have saved a few bytes.
     <li><a href="https://docs.rs/flower-pot/latest/flower_pot/">flower-pot</a> — a simpler Rust crate that just gives short handles to all the ANSI color-codes and styling-codes. I wrote this because I'm too lazy to use any of the ones that make you learn a paradigm of <span style="font-family: monospace; font-weight: bold; font-size: larger;">string.color(Color::RED) -> ColoredText</span>.
 </ul>
+
 <h2>Past obsessions</h2>
 Here are some things I've been obsessed with in the past. Once I get obsessed with something, I'm usually at least cursorily interested forevermore.
 
-<ul>
+<ul class="spaced-list">
 <li><a href="https://en.wikipedia.org/wiki/Go_(game)">Go</a> — an ancient Chinese board game about putting stones on the board and keeping them there (<a href="TODO"><i>not</i> about surrounding territory</a>). I play online at <a href="https://online-go.com/player/148509/">OGS</a>, and offline.
 <li><a href="https://en.wikipedia.org/wiki/Code_golf">Code golf</a> — an arbitrary competition of trying to write the shortest code possible that completes a given task. I play on <a href="https://code.golf/golfers/acotis">code.golf</a>.
 </ul>
 
-<h2>Contact & friends</h2>
+<h2>Essays</h2>
+
+<ul class="spaced-list">
+<li> <a href="todo">Good opinions about equality</a> — everyone deserves to be treated kindly, including people we progressives often exclude, such as men.
+<li> <a href="todo">Go is about stones</a> — the Japanese ruleset for Go is bad, and we should all be using the Chinese ruleset instead, or better yet, the Ancient Chinese ruleset (stone scoring).
+</ul>
+
+<h2>Contact & links</h2>
 <p>My Discord username is <span style="font-family: monospace; font-weight: bold; font-size: larger;">fagri</span> (Lojban for "fire"). Shoot me a friend request!
 
 <p>I am friends with <a href="https://rose.systems/">Rose</a>, who helped me make this website.
@@ -119,4 +148,5 @@ Here are some things I've been obsessed with in the past. Once I get obsessed wi
 <footer style="margin-top: 1.2em; margin-bottom: .2em">○●○●○●○●○●○●○●○●</footer>
 
 </main>
+</div>
 
